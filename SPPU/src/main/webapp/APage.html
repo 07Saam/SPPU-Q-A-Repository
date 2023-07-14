@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html  lang="en">
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <title>Upload Question | Admin</title>
+        
+        <link href="Rcss1.css" rel="stylesheet">
+		<link rel="icon" type="image/x-icon" href="Documentations/SPPU_PNG.webp">
+        
+        <style type="text/css">
+          </style>
+	</head>
+
+	<body>
+	<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand text-info" href="HView.html">SPPU Q&A Repository</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"    aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="px-2"><a href="Login.html" class="text-white fs-6 fw-light">Logout</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+		<section class="login first grey mt-0">
+			<div class="container">
+				<div class="box-wrapper">				
+					<div class="box box-border">
+						<div class="box-body">
+						<p style="font-family: Noto Sans;" class="text-center">Insert Questions <br></p><br>
+							<form method="post" action="AServer" >
+								<div class="form-group">
+									<label>Select Subject</label>
+									<br>
+									<select name="sub" class="w-75" required><option value="" selected disabled hidden>Subject  </option>
+                                        <option value="Java Programming">Java Programming</option>
+										<option value="Data Structures & Algorithm">Data Structures & Algorithm</option>
+										<option value="Object Oriented Software Engineering">Object Oriented Software Engineering</option>
+										<option value="Operating System Concepts">Operating System Concepts</option>
+										<option value="Networking Technologies">Networking Technologies</option>
+                                    </select>
+								</div>
+
+                                <div class="form-group">
+									<label name="year">Select Year of Paper</label>
+									<br>
+									<input type="number" name="year" value="" min="2005" max="2023" required>
+								</div>
+
+                                <div class="form-group">
+									<label>Select Session</label>
+									<br>
+									<select name="session" required><option value="" selected hidden disabled>Winter/Summer</option>
+                                        <option value="1">Winter</option>
+										<option value="0">Summer</option>    
+                                    </select>
+								</div>
+
+
+								<div class="form-group">
+								<label> Add Question</label>
+								<br>
+                                <input type="text" name="ques" rows="5" cols="85" value="" required>
+								<!-- <textarea name="sol" title="enter ans" rows="5" cols="85" wrap="hard" required></textarea> -->
+								<div class="form-group text-center">
+									<button class="btn btn-info btn-block my-3" name="submit">Submit</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+	</body>
+</html>
